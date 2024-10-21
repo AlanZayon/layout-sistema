@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Design</title>
+    <!-- Link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>System Design</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." class="search-input">
+            </div>
+        </header>
+
+        <!-- Seção de perfil do usuário com botão de expansão -->
+        <section class="user-profile" id="user-profile">
+            <!-- Botão para expandir/recolher a seção de perfil -->
+            <button class="expand-btn" onclick="toggleExpandProfile()"><i class="fas fa-angle-right"></i></button>
+
+            <div class="profile-header">
+                <h2>Lame</h2>
+            </div>
+            <div class="profile-details">
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Phone:</strong> +123456789</p>
+            </div>
+
+            <!-- Botões circulares com ícones -->
+            <div class="profile-actions">
+                <button class="action-button edit"><i class="fas fa-edit"></i></button>
+                <button class="action-button delete"><i class="fas fa-trash"></i></button>
+                <button class="action-button view"><i class="fas fa-eye"></i></button>
+            </div>
+        </section>
+
+        <section class="user-cards">
+            <h3>Registered Users</h3>
+            <div class="user-card" id="card-1">
+                <p><strong>Jane Doe</strong></p>
+                <p>Email: jane.doe@example.com</p>
+                <p>Phone: +987654321</p>
+                <button class="expand-btn" onclick="toggleExpand('card-1')"><i class="fas fa-angle-right"></i></button>
+            </div>
+            <div class="user-card" id="card-2">
+                <p><strong>Mark Smith</strong></p>
+                <p>Email: mark.smith@example.com</p>
+                <p>Phone: +5647382910</p>
+                <button class="expand-btn" onclick="toggleExpand('card-2')"><i class="fas fa-angle-right"></i></button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script JavaScript para expandir/recolher os cards e o perfil do usuário -->
+    <script>
+        function toggleExpand(cardId) {
+            const card = document.getElementById(cardId);
+            const button = card.querySelector('.expand-btn');
+
+            if (card.classList.contains('expanded')) {
+                // Se já está expandido, recolhe
+                card.classList.remove('expanded');
+                button.innerHTML = '<i class="fas fa-angle-right"></i>';
+            } else {
+                // Se está recolhido, expande
+                card.classList.add('expanded');
+                button.innerHTML = '<i class="fas fa-angle-left"></i>';
+            }
+        }
+
+        function toggleExpandProfile() {
+            const profile = document.getElementById('user-profile');
+            const button = profile.querySelector('.expand-btn');
+
+            if (profile.classList.contains('expanded')) {
+                // Se já está expandido, recolhe
+                profile.classList.remove('expanded');
+                button.innerHTML = '<i class="fas fa-angle-right"></i>';
+            } else {
+                // Se está recolhido, expande
+                profile.classList.add('expanded');
+                button.innerHTML = '<i class="fas fa-angle-left"></i>';
+            }
+        }
+    </script>
+</body>
+
+</html>
