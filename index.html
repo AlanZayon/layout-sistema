@@ -16,75 +16,179 @@
             <h1>System Design</h1>
             <div class="search-bar">
                 <input type="text" placeholder="Search..." class="search-input">
+                <button class="filter-btn"><i class="fas fa-filter"></i> Filtro</button>
+            </div>
+            <div class="general-actions">
+                <button class="action-btn general-btn"><i class="fas fa-cog"></i></button>
+                <button class="action-btn general-btn"><i class="fas fa-sync-alt"></i></button>
+                <button class="action-btn general-btn"><i class="fas fa-sign-out-alt"></i></button>
             </div>
         </header>
-
-        <!-- Seção de perfil do usuário com botão de expansão -->
-        <section class="user-profile" id="user-profile">
-            <!-- Botão para expandir/recolher a seção de perfil -->
-            <button class="expand-btn" onclick="toggleExpandProfile()"><i class="fas fa-angle-right"></i></button>
-
-            <div class="profile-header">
-                <h2>Lame</h2>
-            </div>
-            <div class="profile-details">
-                <p><strong>Email:</strong> john.doe@example.com</p>
-                <p><strong>Phone:</strong> +123456789</p>
-            </div>
-
-            <!-- Botões circulares com ícones -->
-            <div class="profile-actions">
-                <button class="action-button edit"><i class="fas fa-edit"></i></button>
-                <button class="action-button delete"><i class="fas fa-trash"></i></button>
-                <button class="action-button view"><i class="fas fa-eye"></i></button>
-            </div>
-        </section>
+        <div class="general-actions">
+            <button class="action-btn general-btn"><i class="fas fa-edit"></i></button>
+            <button class="action-btn general-btn"><i class="fas fa-trash"></i></button>
+            <button class="action-btn general-btn"><i class="fas fa-file-alt"></i></button>
+        </div>
 
         <section class="user-cards">
-            <h3>Registered Users</h3>
             <div class="user-card" id="card-1">
-                <p><strong>Jane Doe</strong></p>
-                <p>Email: jane.doe@example.com</p>
-                <p>Phone: +987654321</p>
-                <button class="expand-btn" onclick="toggleExpand('card-1')"><i class="fas fa-angle-right"></i></button>
+                <div class="card-header">
+                    <p><strong>Cód. Servidor:</strong> 12345</p>
+                    <div class="action-buttons">
+                        <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        <button class="action-btn expand-btn" onclick="toggleExpand('card-1')"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <p><strong>Servidor:</strong> João da Silva</p>
+                <p><strong>Secretaria:</strong> Administração</p>
+                <p><strong>Função:</strong> Analista</p>
+                <p><strong>Natureza:</strong> Permanente</p>
+
+                <!-- Informações que só aparecem ao expandir -->
+                <div class="extra-info">
+                    <!-- Card de Informações Financeiras -->
+                    <div class="info-card financial-info">
+                        <h3>Informações Financeiras</h3>
+                        <p><strong>Sal. Bruto:</strong> R$ 10.000,00</p>
+                        <p><strong>Sal. Líquido:</strong> R$ 8.000,00</p>
+                        <p><strong>Banco:</strong> Banco XYZ</p>
+                        <p><strong>Agência:</strong> 1234</p>
+                        <p><strong>Conta:</strong> 56789-0</p>
+                    </div>
+                
+                    <!-- Card de Informações Pessoais -->
+                    <div class="info-card personal-info">
+                        <h3>Informações Pessoais</h3>
+                        <p><strong>Endereço:</strong> Rua das Flores, 123</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                        <p><strong>C.P.F.:</strong> 123.456.789-10</p>
+                        <p><strong>Dependentes:</strong> 2</p>
+                    </div>
+                
+                    <!-- Card de Informações Profissionais -->
+                    <div class="info-card professional-info">
+                        <h3>Informações Profissionais</h3>
+                        <p><strong>Cargo:</strong> Analista Sênior</p>
+                        <p><strong>Formação:</strong> Administração</p>
+                        <p><strong>Setor:</strong> Recursos Humanos</p>
+                        <p><strong>Última Promoção:</strong> 01/01/2023</p>
+                    </div>
+                </div>
             </div>
+
             <div class="user-card" id="card-2">
-                <p><strong>Mark Smith</strong></p>
-                <p>Email: mark.smith@example.com</p>
-                <p>Phone: +5647382910</p>
-                <button class="expand-btn" onclick="toggleExpand('card-2')"><i class="fas fa-angle-right"></i></button>
+                <div class="card-header">
+                    <p><strong>Cód. Servidor:</strong> 12345</p>
+                    <div class="action-buttons">
+                        <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        <button class="action-btn expand-btn" onclick="toggleExpand('card-2')"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <p><strong>Servidor:</strong> João da Silva</p>
+                <p><strong>Secretaria:</strong> Administração</p>
+                <p><strong>Função:</strong> Analista</p>
+                <p><strong>Natureza:</strong> Permanente</p>
+
+                <!-- Informações que só aparecem ao expandir -->
+                <div class="extra-info">
+                    <!-- Card de Informações Financeiras -->
+                    <div class="info-card financial-info">
+                        <h3>Informações Financeiras</h3>
+                        <p><strong>Sal. Bruto:</strong> R$ 10.000,00</p>
+                        <p><strong>Sal. Líquido:</strong> R$ 8.000,00</p>
+                        <p><strong>Banco:</strong> Banco XYZ</p>
+                        <p><strong>Agência:</strong> 1234</p>
+                        <p><strong>Conta:</strong> 56789-0</p>
+                    </div>
+                
+                    <!-- Card de Informações Pessoais -->
+                    <div class="info-card personal-info">
+                        <h3>Informações Pessoais</h3>
+                        <p><strong>Endereço:</strong> Rua das Flores, 123</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                        <p><strong>C.P.F.:</strong> 123.456.789-10</p>
+                        <p><strong>Dependentes:</strong> 2</p>
+                    </div>
+                
+                    <!-- Card de Informações Profissionais -->
+                    <div class="info-card professional-info">
+                        <h3>Informações Profissionais</h3>
+                        <p><strong>Cargo:</strong> Analista Sênior</p>
+                        <p><strong>Formação:</strong> Administração</p>
+                        <p><strong>Setor:</strong> Recursos Humanos</p>
+                        <p><strong>Última Promoção:</strong> 01/01/2023</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="user-card" id="card-3">
+                <div class="card-header">
+                    <p><strong>Cód. Servidor:</strong> 12345</p>
+                    <div class="action-buttons">
+                        <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        <button class="action-btn expand-btn" onclick="toggleExpand('card-3')"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <p><strong>Servidor:</strong> João da Silva</p>
+                <p><strong>Secretaria:</strong> Administração</p>
+                <p><strong>Função:</strong> Analista</p>
+                <p><strong>Natureza:</strong> Permanente</p>
+
+                <!-- Informações que só aparecem ao expandir -->
+                <div class="extra-info">
+                    <!-- Card de Informações Financeiras -->
+                    <div class="info-card financial-info">
+                        <h3>Informações Financeiras</h3>
+                        <p><strong>Sal. Bruto:</strong> R$ 10.000,00</p>
+                        <p><strong>Sal. Líquido:</strong> R$ 8.000,00</p>
+                        <p><strong>Banco:</strong> Banco XYZ</p>
+                        <p><strong>Agência:</strong> 1234</p>
+                        <p><strong>Conta:</strong> 56789-0</p>
+                    </div>
+                
+                    <!-- Card de Informações Pessoais -->
+                    <div class="info-card personal-info">
+                        <h3>Informações Pessoais</h3>
+                        <p><strong>Endereço:</strong> Rua das Flores, 123</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                        <p><strong>C.P.F.:</strong> 123.456.789-10</p>
+                        <p><strong>Dependentes:</strong> 2</p>
+                    </div>
+                
+                    <!-- Card de Informações Profissionais -->
+                    <div class="info-card professional-info">
+                        <h3>Informações Profissionais</h3>
+                        <p><strong>Cargo:</strong> Analista Sênior</p>
+                        <p><strong>Formação:</strong> Administração</p>
+                        <p><strong>Setor:</strong> Recursos Humanos</p>
+                        <p><strong>Última Promoção:</strong> 01/01/2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 e Card 3 seguem o mesmo padrão, então estou omitindo para economizar espaço -->
         </section>
     </div>
 
-    <!-- Script JavaScript para expandir/recolher os cards e o perfil do usuário -->
+    <!-- Script JavaScript para expandir/recolher os cards -->
     <script>
         function toggleExpand(cardId) {
             const card = document.getElementById(cardId);
             const button = card.querySelector('.expand-btn');
+            const extraInfo = card.querySelector('.extra-info');
 
             if (card.classList.contains('expanded')) {
                 // Se já está expandido, recolhe
                 card.classList.remove('expanded');
+                extraInfo.style.display = 'none';
                 button.innerHTML = '<i class="fas fa-angle-right"></i>';
             } else {
                 // Se está recolhido, expande
                 card.classList.add('expanded');
-                button.innerHTML = '<i class="fas fa-angle-left"></i>';
-            }
-        }
-
-        function toggleExpandProfile() {
-            const profile = document.getElementById('user-profile');
-            const button = profile.querySelector('.expand-btn');
-
-            if (profile.classList.contains('expanded')) {
-                // Se já está expandido, recolhe
-                profile.classList.remove('expanded');
-                button.innerHTML = '<i class="fas fa-angle-right"></i>';
-            } else {
-                // Se está recolhido, expande
-                profile.classList.add('expanded');
+                extraInfo.style.display = 'flex'; // Alterado para 'flex' para alinhar colunas
                 button.innerHTML = '<i class="fas fa-angle-left"></i>';
             }
         }
