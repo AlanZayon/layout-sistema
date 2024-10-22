@@ -10,10 +10,7 @@ body {
 }
 
 .container {
-  width: 90%;
   margin: 0 auto;
-  padding: 20px;
-  max-width: 1200px;
 }
 
 .header {
@@ -23,8 +20,7 @@ body {
   background-color: #333;
   color: white;
   padding: 15px 20px;
-  border-radius: 8px;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .header h1 {
@@ -63,7 +59,8 @@ body {
 
 .general-actions {
   display: flex;
-  gap: 10px; /* Espaçamento entre os botões */
+  gap: 10px;
+  margin-left: 15px;
 }
 
 .user-card {
@@ -144,6 +141,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  width: 90%;
+  margin: auto;
 }
 
 .user-card {
